@@ -19,8 +19,14 @@ Start the sidecar separately:
 python -m seraph._serve --port 8000
 ```
 
-For the workspace-local Windows OpenClaw + Ollama pilot, see
+For a local OpenClaw + Ollama setup, see
 [LOCAL_DEPLOYMENT.md](LOCAL_DEPLOYMENT.md).
+You can run the same sidecar in [local Kubernetes](../../deploy/kubernetes/README.md)
+and configure `serverUrl` to its loopback port-forward. Starting either sidecar
+does not configure OpenClaw automatically.
+
+For the human-directed, AI-assisted development history, including the
+pressure-proxy correction, see the [process report](../../docs/development-process.md).
 
 ## Motion contract
 

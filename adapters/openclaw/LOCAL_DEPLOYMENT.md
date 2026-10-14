@@ -5,6 +5,14 @@ sidecar. Configure Ollama and select a local tool-capable model through your
 OpenClaw installation before adding this plugin. Model reliability varies;
 SERAPH enforces host tool proposals, not the model's prose.
 
+Choose one sidecar: the foreground Python server below, the
+[Docker example](../../docs/getting-started.md#run-the-sidecar-with-docker), or
+[local Kubernetes](../../deploy/kubernetes/README.md). The Docker/Kubernetes
+guides expose `http://127.0.0.1:8765`; use that value for the plugin's
+`serverUrl` instead of the Python example's port 8000. If the sidecar is already
+running, skip starting a second one. Building and configuring the plugin is
+still required. None of these server paths automatically attaches an agent.
+
 From the SERAPH checkout, create a Python environment, activate it, then run:
 
 ```console
@@ -69,3 +77,7 @@ Stop the foreground sidecar with Ctrl+C. State is in memory and is lost on
 restart. See [security boundaries](../../SECURITY.md) and
 [validation evidence](../../docs/publication.md). The original machine-specific
 helper, runtime downloads, configuration, credentials, and logs are not included.
+
+The [development process report](../../docs/development-process.md) describes
+the human direction, AI contributions, critique, and corrections behind this
+integration without exposing conversations or private operational state.

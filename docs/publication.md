@@ -16,7 +16,10 @@ The public set includes the kernel, generic adapters, examples, tests, formal
 definitions, documentation, and CI. It excludes raw conversations, scratchpad
 notes, private history, agent state, credentials, local runtime binaries,
 machine-specific launch helpers, and the uncommitted Claude Code hook. No
-private methods report or proprietary application topology is published here.
+private archive or proprietary application topology is published here. A
+[public development-process report](development-process.md) now describes the
+collaboration using attributed paraphrases and inspectable code references;
+it does not release transcripts or the original decision archive.
 
 ## Additional release work
 
@@ -27,8 +30,8 @@ private methods report or proprietary application topology is published here.
   incomplete replies could throw in the hook rather than return an explicit
   blocking result. Invalid shapes now produce `seraph_invalid_response`.
 - Added `validation/` to Docker's package source and excluded local build state
-  from Docker context. Docker execution was not tested locally; CI separately
-  builds the image, checks sidecar health, and runs its installed validation harness.
+  from Docker context. Both CI and the subsequent local Docker installation
+  built the image, checked sidecar health, and ran its installed validation harness.
 - Moved the SDK needed only by the CHANDRA live example to the optional
   `chandra` extra. The core kernel requires no cloud-model SDK.
 - CI uses pytest to include five cases omitted by unittest discovery, installs
@@ -52,6 +55,21 @@ private methods report or proprietary application topology is published here.
 | Lean build and independent proof replay | Passed; 13 build jobs |
 | Source distribution and wheel build | Passed |
 | Fresh wheel install outside checkout | CLI, demos, web export, and 17-case corpus passed |
+
+## Subsequent local deployment, 2026-10-14
+
+The source at `bd0a42dbf95bd79e43896bff1b9081f07f9e2396` was built on the
+maintainer's Docker Desktop 4.95.0 installation. Its container passed the
+17-case validation corpus and HTTP health check. The same image was deployed
+to Desktop's kind Kubernetes 1.36.1 cluster with one Ready node. Seraph's pod
+became Ready, the in-pod corpus passed 17/17, and all seven adapter integration
+cases passed through its localhost port-forward. The
+[manifest and operating instructions](../deploy/kubernetes/README.md) reproduce
+that bounded deployment. No new model trial, cloud deployment, horizontal
+scaling, or persistent session storage was established.
+
+The table above describes the prepared source checks; the following notes
+retain their limitations. Current CI is independently visible in Actions.
 
 Fault injection covers HTTP 500, malformed JSON, missing fields, unknown
 decisions, invalid reason fields, a valid allow control, the intentional

@@ -1,9 +1,13 @@
 # SERAPH
 
-SERAPH is a deterministic runtime-governance kernel for autonomous and agentic
-systems. It evaluates the geometry of a proposed transition while the system is
-moving: scoped constraints, trajectory coherence, recovery, containment,
-coupling authenticity, and relocation.
+SERAPH is a research kernel for evaluating an agent's proposed actions before
+execution and recording what its host reports actually happened. Connect it
+through an adapter, declare the constraints and evidence your application needs,
+and inspect why a transition was admitted, held, or denied.
+
+It combines scoped constraint checks, trajectory coherence, recovery,
+containment, coupling checks, and execution binding. The OpenClaw adapter is
+the reference path for experimenting with a self-hosted agent and local model.
 
 This is the domain-neutral public research repository, migrated from a reviewed
 source snapshot with fresh history. Private research archives and deployment
@@ -36,6 +40,33 @@ SERAPH includes:
 
 It is a research artifact and formalized prototype, not a certified production
 safety system.
+
+## What do I do with it?
+
+| Your goal | Start here |
+|---|---|
+| Understand decisions through runnable examples | [Getting started](docs/getting-started.md) |
+| Connect OpenClaw and a local Ollama model | [Local agent setup](adapters/openclaw/LOCAL_DEPLOYMENT.md) |
+| Run the sidecar in local Kubernetes | [Kubernetes deployment](deploy/kubernetes/README.md) |
+| Evaluate or challenge the architecture | [Validation](docs/validation.md) and [design lineage](docs/design_lineage.md) |
+| Understand how it was developed with AI | [Development process report](docs/development-process.md) |
+| Fix a defect or add an adapter | [Contributing](CONTRIBUTING.md) |
+
+Running the server alone does not attach it to an agent. The adapter must
+intercept the host's tools, submit proposals, enforce dispositions, and report
+execution. The OpenClaw prototype uses coarse tool profiles; it blocks shell
+execution, including harmless echo, and does not measure semantic pressure from
+tool names. Start with a disposable workspace and inspect both decisions and
+host results. See [deployment boundaries](SECURITY.md).
+
+## Public availability
+
+This GitHub repository's source, documentation, tests, and proofs are public.
+You can browse, clone, or fork them subject to the repository's license terms.
+The private development archive, transcripts, credentials, and local agent state
+are not published. The process report describes the collaboration without
+releasing those records. There is no hosted Seraph service, and no PyPI or npm
+publication is implied. See [publication evidence](docs/publication.md).
 
 ## Constraint model
 

@@ -3,6 +3,9 @@
 SERAPH is a research alpha. Useful contributions include reproducible defects,
 adapter integrations, comparator implementations, and challenges to its claims.
 Keep issues free of credentials, private deployment state, and raw conversations.
+The [development process report](docs/development-process.md) explains the
+project's human-directed AI-assisted workflow. Contributions should preserve
+decision rationale and counterexamples without posting private transcripts.
 
 Install Python 3.11 or newer, then run:
 

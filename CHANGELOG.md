@@ -8,6 +8,11 @@ Status: public research alpha source; not published to PyPI or npm.
 
 ### Added
 
+- Practical getting-started paths and a tested local Kubernetes deployment
+  manifest with operating limits and adapter connection instructions.
+- A public development-process report attributing human and AI contributions,
+  preserving correction cases, and keeping the original archive private.
+
 - Deterministic Python governance kernel for invariant closure checks.
 - HTTP sidecar entrypoint for runtime governance.
 - Adapter examples for agent runtimes, CI/CD gates, tool guards, delegation,
