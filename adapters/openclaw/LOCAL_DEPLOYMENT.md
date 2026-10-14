@@ -31,13 +31,13 @@ npm run validate:failures
 ```
 
 Add the following fragment to your existing OpenClaw configuration, merging
-with existing plugin entries. Replace `/absolute/path/to/seraph-open` with the
+with existing plugin entries. Replace `/absolute/path/to/SERAPH-1.0` with the
 actual checkout path (Windows JSON paths can use forward slashes):
 
 ```json
 {
   "plugins": {
-    "load": { "paths": ["/absolute/path/to/seraph-open/adapters/openclaw"] },
+    "load": { "paths": ["/absolute/path/to/SERAPH-1.0/adapters/openclaw"] },
     "entries": {
       "seraph-governance": {
         "enabled": true,

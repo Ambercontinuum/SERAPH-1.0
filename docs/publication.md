@@ -1,6 +1,6 @@
 # Public research alpha: provenance and validation
 
-Publication target: `https://github.com/Ambercontinuum/seraph-open`.
+Publication target: `https://github.com/Ambercontinuum/SERAPH-1.0`.
 Prepared on 2026-10-14 from reviewed source snapshot
 `95ef9971734a61b7ad6fd531627d1f3114a42f5d`, with publication-specific changes.
 This repository begins with fresh history. The migration receipt and original

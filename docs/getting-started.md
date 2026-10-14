@@ -9,8 +9,8 @@ one adapter and inspect the decisions it produces.
 With Git and Python 3.11 or newer installed:
 
 ```console
-git clone https://github.com/Ambercontinuum/seraph-open.git
-cd seraph-open
+git clone https://github.com/Ambercontinuum/SERAPH-1.0.git
+cd SERAPH-1.0
 python -m venv .venv
 ```
 
