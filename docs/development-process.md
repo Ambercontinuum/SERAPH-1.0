@@ -31,10 +31,11 @@ AI-generated output remained subject to inspection and testing.
 
 ## Human intent as a runtime governance commitment
 
-Amber's framing is that Seraph should be a "conscience made by you": explicit
-human commitments accompany the agent into action. This expresses the purpose
-of the architecture. Its technical substance is the constraint, evidence, and
-execution contract implemented at a mediated boundary.
+Amber's framing is: **Seraph carries your intent into action.** A compass you
+define, expressed through commitments that can be enforced, inspected, and
+revised as your agent acts. This expresses the purpose of the architecture.
+Its technical substance is the constraint, evidence, and execution contract
+implemented at a mediated boundary.
 
 Onboarding instructions tell an agent what is expected. Seraph adds a runtime
 path where encoded commitments can affect whether a proposed action proceeds,

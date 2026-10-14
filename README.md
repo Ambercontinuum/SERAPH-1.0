@@ -17,12 +17,12 @@ SERAPH's contracts but are not part of the public architecture.
 
 ## Why it matters to governance research
 
-**Seraph is a human-authored governance layer that accompanies an agent into
-action, carrying explicit commitments forward as constraints that can be
-enforced, inspected, and revised.**
+**Seraph carries your intent into action.**
 
-Amber describes the purpose as a "conscience made by you": human intent remains
-consequential as execution scales. People define and revise the commitments;
+A compass you define, expressed through commitments that can be enforced,
+inspected, and revised as your agent acts.
+
+Human intent remains consequential as execution scales. People define and revise the commitments;
 the runtime applies their encoded form across the tool calls it mediates.
 This extends human direction beyond onboarding instructions without requiring
 a person to approve every action individually.
