@@ -29,6 +29,47 @@ includes architecture, requirements, correction, and release decisions;
 implementation assistance and verification are also explicitly credited.
 AI-generated output remained subject to inspection and testing.
 
+## Human intent as a runtime governance commitment
+
+Amber's framing is that Seraph should be a "conscience made by you": explicit
+human commitments accompany the agent into action. This expresses the purpose
+of the architecture. Its technical substance is the constraint, evidence, and
+execution contract implemented at a mediated boundary.
+
+Onboarding instructions tell an agent what is expected. Seraph adds a runtime
+path where encoded commitments can affect whether a proposed action proceeds,
+what evidence is required, and how the result is checked. People remain
+responsible for defining, inspecting, and revising those commitments. A runtime
+can apply their encoded form repeatedly without a human approving each call;
+it does not automatically capture the whole of a person's intent.
+
+This matters to governance research because it connects stated constraints to
+inspectable decisions and observed consequences. The public implementation
+provides a concrete object for investigating four questions:
+
+- **Completeness:** Which modeled affected entities and consequences must be
+  accounted for before a transition is admitted?
+- **Uncertainty:** What happens when a required observation is unresolved,
+  missing, or refuted?
+- **Accountability:** Can authorization be bound to a specific action, and can
+  proposals be distinguished from host-reported execution?
+- **Continuity:** Can immediate or delayed divergence trigger containment, and
+  do commitments remain effective when execution moves through another path?
+
+Users can inspect why Seraph intervened and challenge whether its encoded policy
+represents what they meant. That is visibility into the governance layer's
+decision, not an explanation of all the model's internal reasoning. Keeping
+that distinction explicit makes disagreement actionable: the policy, evidence,
+integration, or claim can be examined and corrected.
+
+The ambition extends across tools, delegation, and agent collectives. Current
+evidence establishes bounded kernel behavior and the tested host integration;
+unmediated code and arbitrary downstream agents do not automatically inherit
+enforcement. Demonstrating that commitments remain attached through those
+boundaries is a research obligation. See [validation](validation.md),
+[execution contracts](manifold_compiler.md), and the
+[OpenClaw motion contract](../adapters/openclaw/README.md#motion-contract).
+
 ## The collaboration loop
 
 Amber describes the collaboration as a cybernetic feedback loop: distinct

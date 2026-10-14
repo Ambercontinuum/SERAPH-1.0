@@ -15,6 +15,29 @@ state are excluded. See [publication provenance](docs/publication.md).
 Proprietary mission topologies and downstream products integrate through
 SERAPH's contracts but are not part of the public architecture.
 
+## Why it matters to governance research
+
+**Seraph is a human-authored governance layer that accompanies an agent into
+action, carrying explicit commitments forward as constraints that can be
+enforced, inspected, and revised.**
+
+Amber describes the purpose as a "conscience made by you": human intent remains
+consequential as execution scales. People define and revise the commitments;
+the runtime applies their encoded form across the tool calls it mediates.
+This extends human direction beyond onboarding instructions without requiring
+a person to approve every action individually.
+
+The open implementation lets users investigate why the governance layer admitted,
+held, or blocked a proposal and compare that decision with reported execution.
+For researchers, it makes questions about constraint completeness, unresolved
+evidence, execution binding, and later consequences concrete and testable.
+
+The demonstrated path is the instrumented host/adapter integration. Preserving
+commitments across every tool, delegated agent, or swarm remains an obligation
+to test, not a property established by calling the server. See the
+[governance framing and process report](docs/development-process.md#human-intent-as-a-runtime-governance-commitment)
+and [validation boundaries](docs/validation.md).
+
 ## Current status
 
 The Python distribution is the `0.1.0` public research alpha, installable from
