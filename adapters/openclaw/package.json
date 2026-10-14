@@ -1,0 +1,25 @@
+{
+  "name": "seraph-openclaw",
+  "version": "0.1.0",
+  "description": "SERAPH governance plugin for OpenClaw — gates every tool call before execution.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "openclaw": {
+    "extensions": ["./src/index.ts"]
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "validate:ledger": "node dist/motion-ledger-validation.js",
+    "validate:adapter": "node scripts/validate-adapter.mjs",
+    "validate:failures": "node scripts/validate-failures.mjs"
+  },
+  "peerDependencies": {
+    "openclaw": "2026.7.1-2"
+  },
+  "devDependencies": {
+    "openclaw": "2026.7.1-2",
+    "typescript": "^5.0.0"
+  }
+}

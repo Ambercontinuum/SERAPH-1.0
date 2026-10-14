@@ -1,0 +1,4 @@
+recursive-include docs *.md *.html *.css *.js
+recursive-include seraph/examples *.json
+recursive-include seraph_demo/scenarios *.json
+

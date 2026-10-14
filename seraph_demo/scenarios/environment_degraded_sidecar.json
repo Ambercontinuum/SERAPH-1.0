@@ -1,0 +1,38 @@
+{
+  "name": "environment_degraded_sidecar",
+  "kind": "governance",
+  "description": "Unsafe environment denies and routes deployment posture to sidecar.",
+  "input": {
+    "constraints": {
+      "frame_id": "unbounded-remediation",
+      "topology_id": "scenarios.environment"
+    },
+    "trajectory": ["probe", "probe", "maneuver", "maneuver"],
+    "prp_trail": {
+      "scores": [
+        {
+          "detection_latency": 0.0,
+          "recovery_fidelity": 1.0,
+          "coupling_preservation": 1.0
+        }
+      ]
+    },
+    "guardian": {
+      "mode": "seraph_l"
+    },
+    "environment": {
+      "containment": 1.0,
+      "reversibility": 1.0,
+      "blast_radius_control": 0.0,
+      "externality_control": 1.0
+    },
+    "request_commit": true
+  },
+  "expected": {
+    "decision": "deny",
+    "operating_layer": "containment",
+    "posture": "sidecar",
+    "environment_safe": false,
+    "reasons_include": ["environment_invariant_failed", "environment_safety_loss"]
+  }
+}

@@ -1,0 +1,51 @@
+                    GNU AFFERO GENERAL PUBLIC LICENSE
+                       Version 3, 19 November 2007
+
+Copyright (C) 2026 Amber Anson / Ambercontinuum Research
+Contact: Ambercontinuum@gmail.com
+
+SERAPH — Invariant Architecture for AI-Era Governance
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+A copy of the GNU Affero General Public License is available at:
+https://www.gnu.org/licenses/agpl-3.0.html
+
+-------------------------------------------------------------------------------
+COMMERCIAL LICENSING
+
+If you wish to use SERAPH in a proprietary product, closed-source system,
+or commercial service without complying with the terms of the AGPL-3.0,
+a commercial license is required.
+
+Commercial use includes but is not limited to:
+  - Incorporating SERAPH into a proprietary software product
+  - Offering SERAPH or a derivative as a hosted or managed service
+  - Using SERAPH in enterprise infrastructure without open-sourcing
+    the surrounding system under AGPL-3.0
+
+To obtain a commercial license, contact: Ambercontinuum@gmail.com
+
+Attribution is required in all cases. Any use of SERAPH, whether under
+the AGPL-3.0 or a commercial license, must credit:
+
+    Amber Anson / Ambercontinuum Research — SERAPH: Invariant Architecture for AI-Era Governance
+    https://github.com/Ambercontinuum/seraph-open
+
+-------------------------------------------------------------------------------
+FORMAL PROOFS (formal/ directory)
+
+The Lean 4 formalization in the formal/ directory is additionally licensed
+under Creative Commons Attribution 4.0 International (CC BY 4.0) to allow
+use in academic publications and formal verification research, provided
+attribution to Amber Anson / Ambercontinuum Research is preserved.
+
+https://creativecommons.org/licenses/by/4.0/

@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.claude/
+dist/
+build/
+*.egg-info/
+node_modules/
+.lake/
+runtime-governance-report.json
+artifacts/local-agent/
+.agent-write-lease.json
+
+# Local verification workspace assembled for the Lean web playground.
+formal/_scratch_combined_for_web_check.lean

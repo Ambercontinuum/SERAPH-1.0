@@ -1,0 +1,35 @@
+{
+  "constraints": {
+    "frame_id": "attacked-vector-relocation",
+    "topology_id": "examples.relocation"
+  },
+  "trajectory": ["attacked", "attacked", "alternate", "alternate"],
+  "prp_trail": {
+    "scores": [
+      {
+        "detection_latency": 0.0,
+        "recovery_fidelity": 1.0,
+        "coupling_preservation": 1.0
+      }
+    ]
+  },
+  "guardian": {
+    "mode": "seraph_l"
+  },
+  "environment": {
+    "containment": 1.0,
+    "reversibility": 1.0,
+    "blast_radius_control": 1.0,
+    "externality_control": 1.0
+  },
+  "relocation": {
+    "source_layer": "witness",
+    "target_layer": "maneuver",
+    "torsion": 0.1,
+    "orbit_equivalent": true,
+    "identity_preservation": 1.0,
+    "closure_preservation": 1.0,
+    "transition_cost": 0.001
+  },
+  "request_commit": false
+}

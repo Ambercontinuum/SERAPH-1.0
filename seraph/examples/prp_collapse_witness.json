@@ -1,0 +1,36 @@
+{
+  "constraints": {
+    "frame_id": "autonomous-remediation",
+    "topology_id": "examples.recovery"
+  },
+  "trajectory": ["repair", "repair", "stabilize", "stabilize"],
+  "prp_trail": {
+    "scores": [
+      {
+        "detection_latency": 1.0,
+        "recovery_fidelity": 0.7,
+        "coupling_preservation": 0.7
+      },
+      {
+        "detection_latency": 2.5,
+        "recovery_fidelity": 0.4,
+        "coupling_preservation": 0.4
+      },
+      {
+        "detection_latency": 4.5,
+        "recovery_fidelity": 0.1,
+        "coupling_preservation": 0.1
+      }
+    ]
+  },
+  "guardian": {
+    "mode": "seraph_m"
+  },
+  "environment": {
+    "containment": 1.0,
+    "reversibility": 1.0,
+    "blast_radius_control": 1.0,
+    "externality_control": 1.0
+  },
+  "request_commit": true
+}

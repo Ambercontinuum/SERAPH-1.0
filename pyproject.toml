@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seraph-governance"
+version = "0.1.0"
+description = "Invariant architecture for AI-era governance."
+readme = "README.md"
+requires-python = ">=3.11"
+# Library consumers resolve compatible ranges; release gates test isolated artifacts.
+dependencies = []
+authors = [
+  { name = "Amber Anson" },
+  { name = "Ambercontinuum Research" },
+]
+license = "AGPL-3.0-or-later"
+keywords = ["ai-governance", "invariants", "agentic-ai", "safety"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.optional-dependencies]
+serve = ["fastapi>=0.110.0", "uvicorn[standard]>=0.27.0", "pydantic>=2.0.0"]
+test = ["httpx>=0.27.0", "pytest>=8.0.0"]
+chandra = ["anthropic>=0.100.0"]
+
+[project.scripts]
+seraph      = "seraph.__main__:main"
+seraph-serve = "seraph._serve:main"
+seraph-demo  = "seraph_demo.runner:main"
+seraph-demo-export = "seraph_demo.web_export:main"
+
+[tool.setuptools]
+packages = [
+  "seraph",
+  "seraph.examples",
+  "adapters",
+  "seraph_demo",
+  "seraph_demo.scenarios",
+  "validation",
+]
+
+[tool.setuptools.package-data]
+"seraph.examples" = ["*.json"]
+"seraph_demo.scenarios" = ["*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

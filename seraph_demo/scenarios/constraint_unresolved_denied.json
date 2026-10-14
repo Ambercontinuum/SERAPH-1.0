@@ -1,0 +1,46 @@
+{
+  "name": "constraint_unresolved_denied",
+  "kind": "governance",
+  "description": "A required transition relation remains unresolved, so commit fails closed.",
+  "input": {
+    "constraints": {
+      "frame_id": "unresolved-recovery",
+      "topology_id": "scenarios.recovery",
+      "required_relations": ["recovery_viability"],
+      "observations": [
+        {
+          "name": "recovery_viability",
+          "resolution": "unresolved",
+          "evidence_ref": "scenario"
+        }
+      ]
+    },
+    "trajectory": ["review", "review", "commit", "commit"],
+    "prp_trail": {
+      "scores": [
+        {
+          "detection_latency": 0.0,
+          "recovery_fidelity": 1.0,
+          "coupling_preservation": 1.0
+        }
+      ]
+    },
+    "guardian": {
+      "mode": "seraph_m"
+    },
+    "environment": {
+      "containment": 1.0,
+      "reversibility": 1.0,
+      "blast_radius_control": 1.0,
+      "externality_control": 1.0
+    },
+    "request_commit": true
+  },
+  "expected": {
+    "decision": "deny",
+    "operating_layer": "containment",
+    "posture": "sidecar",
+    "constraints_closed": false,
+    "reasons_include": ["constraint_unresolved", "constraint_unresolved:recovery_viability"]
+  }
+}

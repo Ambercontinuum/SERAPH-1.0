@@ -1,0 +1,19 @@
+{
+  "id": "seraph-governance",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "serverUrl": {
+        "type": "string",
+        "default": "http://127.0.0.1:8000",
+        "description": "URL of the SERAPH governance sidecar."
+      },
+      "warnOnly": {
+        "type": "boolean",
+        "default": false,
+        "description": "Audit mode: log governance decisions without blocking execution."
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.git
+.agent-write-lease.json
+.venv
+node_modules
+**/node_modules
+**/__pycache__
+**/.lake
+artifacts
+dist
+build
+*.egg-info

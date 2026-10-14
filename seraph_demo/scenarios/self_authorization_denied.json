@@ -1,0 +1,41 @@
+{
+  "name": "self_authorization_denied",
+  "kind": "governance",
+  "description": "Guardian attempts to self-issue an override.",
+  "input": {
+    "constraints": {
+      "frame_id": "self-issuance-attempt",
+      "topology_id": "scenarios.guardian"
+    },
+    "trajectory": ["observe", "observe", "override", "override"],
+    "prp_trail": {
+      "scores": [
+        {
+          "detection_latency": 0.0,
+          "recovery_fidelity": 1.0,
+          "coupling_preservation": 1.0
+        }
+      ]
+    },
+    "guardian": {
+      "mode": "seraph_l",
+      "authorization": {
+        "self_authorization": 1.0
+      }
+    },
+    "environment": {
+      "containment": 1.0,
+      "reversibility": 1.0,
+      "blast_radius_control": 1.0,
+      "externality_control": 1.0
+    },
+    "request_commit": true
+  },
+  "expected": {
+    "decision": "deny",
+    "operating_layer": "containment",
+    "posture": "sidecar",
+    "guardian_coherent": false,
+    "reasons_include": ["guardian_invariant_failed", "self_authorization_pressure"]
+  }
+}

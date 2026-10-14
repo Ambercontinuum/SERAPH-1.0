@@ -1,0 +1,47 @@
+{
+  "name": "relocation_maneuver",
+  "kind": "governance",
+  "description": "Admissible relocation changes operating layer without granting commit.",
+  "input": {
+    "constraints": {
+      "frame_id": "non-traversal-relocation",
+      "topology_id": "scenarios.relocation"
+    },
+    "trajectory": ["witness", "witness", "maneuver", "maneuver"],
+    "prp_trail": {
+      "scores": [
+        {
+          "detection_latency": 0.0,
+          "recovery_fidelity": 1.0,
+          "coupling_preservation": 1.0
+        }
+      ]
+    },
+    "guardian": {
+      "mode": "seraph_l"
+    },
+    "environment": {
+      "containment": 1.0,
+      "reversibility": 1.0,
+      "blast_radius_control": 1.0,
+      "externality_control": 1.0
+    },
+    "relocation": {
+      "source_layer": "witness",
+      "target_layer": "maneuver",
+      "torsion": 0.1,
+      "orbit_equivalent": true,
+      "identity_preservation": 1.0,
+      "closure_preservation": 1.0,
+      "transition_cost": 0.001
+    },
+    "request_commit": false
+  },
+  "expected": {
+    "decision": "allow",
+    "operating_layer": "maneuver",
+    "posture": "embedded",
+    "relocation_admissible": true,
+    "reasons_include": ["stable"]
+  }
+}

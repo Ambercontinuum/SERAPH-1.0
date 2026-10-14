@@ -1,0 +1,29 @@
+{
+  "constraints": {
+    "frame_id": "incident-escalation",
+    "topology_id": "examples.evidence"
+  },
+  "trajectory": ["observe", "observe", "escalate", "escalate"],
+  "prp_trail": {
+    "scores": [
+      {
+        "detection_latency": 0.0,
+        "recovery_fidelity": 1.0,
+        "coupling_preservation": 1.0
+      }
+    ]
+  },
+  "guardian": {
+    "mode": "seraph_l",
+    "evidence": {
+      "auditability": 0.5
+    }
+  },
+  "environment": {
+    "containment": 1.0,
+    "reversibility": 1.0,
+    "blast_radius_control": 1.0,
+    "externality_control": 1.0
+  },
+  "request_commit": true
+}

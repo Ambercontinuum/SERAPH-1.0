@@ -1,0 +1,46 @@
+{
+  "name": "extraction_containment",
+  "kind": "governance",
+  "description": "Extraction-grade coupling denies and activates the sidecar path.",
+  "input": {
+    "constraints": {
+      "frame_id": "bulk-extraction-session",
+      "topology_id": "scenarios.distillation"
+    },
+    "trajectory": ["query", "query", "query", "query"],
+    "prp_trail": {
+      "scores": [
+        {
+          "detection_latency": 0.0,
+          "recovery_fidelity": 1.0,
+          "coupling_preservation": 1.0
+        }
+      ]
+    },
+    "guardian": {
+      "mode": "seraph_m"
+    },
+    "environment": {
+      "containment": 1.0,
+      "reversibility": 1.0,
+      "blast_radius_control": 1.0,
+      "externality_control": 1.0
+    },
+    "distillation": {
+      "semantic_load_variance": 0.0,
+      "timing_variance": 0.0,
+      "operator_adaptation": 0.0,
+      "topic_coherence": 0.0,
+      "recursion_depth": 0.0,
+      "symbolic_pressure": 0.0
+    },
+    "request_commit": true
+  },
+  "expected": {
+    "decision": "deny",
+    "operating_layer": "containment",
+    "posture": "sidecar",
+    "distillation_authenticity": "extraction",
+    "reasons_include": ["distillation_invariant_failed", "distillation_extraction_coupling"]
+  }
+}

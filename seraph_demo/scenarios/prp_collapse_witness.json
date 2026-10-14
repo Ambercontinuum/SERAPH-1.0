@@ -1,0 +1,47 @@
+{
+  "name": "prp_collapse_witness",
+  "kind": "governance",
+  "description": "Recovery collapse routes the system to witness instead of commit.",
+  "input": {
+    "constraints": {
+      "frame_id": "collapse-trail",
+      "topology_id": "scenarios.recovery"
+    },
+    "trajectory": ["observe", "observe", "commit", "commit"],
+    "prp_trail": {
+      "scores": [
+        {
+          "detection_latency": 1.0,
+          "recovery_fidelity": 0.7,
+          "coupling_preservation": 0.7
+        },
+        {
+          "detection_latency": 2.5,
+          "recovery_fidelity": 0.4,
+          "coupling_preservation": 0.4
+        },
+        {
+          "detection_latency": 4.5,
+          "recovery_fidelity": 0.1,
+          "coupling_preservation": 0.1
+        }
+      ]
+    },
+    "guardian": {
+      "mode": "seraph_m"
+    },
+    "environment": {
+      "containment": 1.0,
+      "reversibility": 1.0,
+      "blast_radius_control": 1.0,
+      "externality_control": 1.0
+    },
+    "request_commit": true
+  },
+  "expected": {
+    "decision": "witness",
+    "operating_layer": "witness",
+    "posture": "sidecar",
+    "reasons_include": ["prp_collapsing"]
+  }
+}

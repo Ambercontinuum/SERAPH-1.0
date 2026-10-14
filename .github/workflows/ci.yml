@@ -1,0 +1,114 @@
+name: CI
+
+# COMPLIANCE-30 (Continuous Compliance): this workflow revalidates both the
+# Python kernel and the machine-checked Lean model on every push/PR.
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install package
+        run: python -m pip install -e ".[serve,test]"
+      - name: Run tests
+        run: python -m pytest -q
+      - name: Run example CLI
+        run: python -m seraph
+      - name: Run scenario corpus
+        run: python -m seraph_demo --quiet
+      - name: Run runtime-governance validation corpus
+        run: python -m validation.runtime_governance
+      - name: Run adapter demos
+        run: |
+          python examples/agent_runtime/demo.py
+          python examples/cicd_gate/demo.py
+          python examples/tool_guard/demo.py
+          python examples/multi_agent/demo.py
+
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install build frontend
+        run: python -m pip install build
+      - name: Build source and wheel artifacts
+        run: python -m build --sdist --wheel
+      - name: Validate the installed wheel outside the checkout
+        run: |
+          python -m venv /tmp/seraph-wheel
+          /tmp/seraph-wheel/bin/python -m pip install --no-deps dist/*.whl
+          cd /tmp
+          /tmp/seraph-wheel/bin/seraph --pretty
+          /tmp/seraph-wheel/bin/seraph-demo --quiet
+          /tmp/seraph-wheel/bin/seraph-demo-export \
+            --output /tmp/seraph-demo-data.js
+          /tmp/seraph-wheel/bin/python -m validation.runtime_governance \
+            --output "$GITHUB_WORKSPACE/runtime-governance-report.json"
+      - name: Retain installed-artifact validation evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: runtime-governance-validation
+          path: runtime-governance-report.json
+
+  build-plugin:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: adapters/openclaw
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          registry-url: "https://registry.npmjs.org"
+      - run: npm ci
+      - run: npm run build
+      - run: npm run validate:ledger
+      - run: npm run validate:failures
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install the sidecar for adapter integration tests
+        working-directory: .
+        run: python -m pip install ".[serve]"
+      - name: Validate plugin hooks against the sidecar
+        working-directory: .
+        env:
+          SERAPH_TEST_URL: http://127.0.0.1:8765
+        run: |
+          python -m uvicorn seraph.server:app --host 127.0.0.1 --port 8765 &
+          sidecar_pid=$!
+          trap 'kill "$sidecar_pid"' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent "$SERAPH_TEST_URL/health"; then break; fi
+            sleep 1
+          done
+          node adapters/openclaw/scripts/validate-adapter.mjs
+
+  formal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and independently replay Lean proofs
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          auto-config: false
+          build: true
+          test: false
+          lint: false
+          leanchecker: true
+          use-github-cache: false
