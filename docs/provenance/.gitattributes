@@ -1,0 +1,4 @@
+# Preserve exact evidence bytes across checkouts, including on Windows.
+evidence.json -text
+signing-key.asc -text
+SHA256SUMS -text

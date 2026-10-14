@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-14",
+  "project": "SERAPH",
+  "status": "Local review artifact; creation does not publish it",
+  "hashing": "SHA-256 over exact bytes, without newline or encoding normalization; Git OIDs use repository SHA-1 object framing",
+  "historical_evidence": [
+    {
+      "id": "historical-python-model",
+      "availability": "retained historical source; not bundled with this publication",
+      "commit": "05907caa399b70a3f7561650e3890df6fe1eafc1",
+      "author_date": "2026-05-06T07:46:48-04:00",
+      "committer_date": "2026-05-06T07:46:48-04:00",
+      "path": "seraph/invariant_model.py",
+      "git_blob_oid": "60476873202b4885678e1733e906bce5eafe328c",
+      "content_sha256": "f3d4a4f525b81e279851288902f7a56a0e23afb12f3ba71eafbb73f428134d43",
+      "byte_length": 29006,
+      "commit_payload_sha256": "286ebd7875a16012eaae836f27426b168c1beb8c4e9c2c064f8bad8feb6ce933",
+      "embedded_signature_present": false,
+      "signature_verification": "no embedded signature"
+    },
+    {
+      "id": "historical-lean-model",
+      "availability": "retained historical source; not bundled with this publication",
+      "commit": "314fa74be5e630e33b40366c1c8442f66fb643c2",
+      "author_date": "2026-05-06T12:02:17-04:00",
+      "committer_date": "2026-05-06T12:02:17-04:00",
+      "path": "formal/Authority.lean",
+      "git_blob_oid": "1b76155a2f1013a23c909e5f7df3581aa4d238a3",
+      "content_sha256": "221b913c13ec1ab4852d008557ea055cf9d90e69931a8673bd8b9af84f3f2ce0",
+      "byte_length": 6208,
+      "commit_payload_sha256": "e1c70dc64f60d594d0c71486e7226ef06c544fdd4a27ff145ae426dbcc92a613",
+      "embedded_signature_present": false,
+      "signature_verification": "no embedded signature"
+    },
+    {
+      "id": "mcc-replacement",
+      "availability": "retained historical source; not bundled with this publication",
+      "commit": "811a90cccbe1d748078f119b3970d5650efa43cc",
+      "author_date": "2026-07-26T21:14:04-04:00",
+      "committer_date": "2026-07-26T21:14:04-04:00",
+      "path": "seraph/constraint_layer.py",
+      "git_blob_oid": "590c8b69ba5dc3124cff5a211dacbe0bf04e01a0",
+      "content_sha256": "25e1175554a5a1ba820331acf05d82b76e86e8fa672b2f6e78251b9534728024",
+      "byte_length": 7330,
+      "commit_payload_sha256": "baabb3d9bcfa1cc08e1c45d93ad1c4e153d214f2f1bc3cc3e124c966e2323772",
+      "embedded_signature_present": true,
+      "signature_verification": "valid cryptographic signature; owner trust not established",
+      "verified_signing_key_fingerprint": "60478B57AF12FE4ABCCB5B8967AD45206315CD5B"
+    },
+    {
+      "id": "mcc-formal-model",
+      "availability": "retained historical source; not bundled with this publication",
+      "commit": "811a90cccbe1d748078f119b3970d5650efa43cc",
+      "author_date": "2026-07-26T21:14:04-04:00",
+      "committer_date": "2026-07-26T21:14:04-04:00",
+      "path": "formal/ConstraintGraph.lean",
+      "git_blob_oid": "0acbf7854a4f9790f1ca967b5251fe1d8c05c9ab",
+      "content_sha256": "d11e22dfca0104b0d6c39dd4d49fcb18c0d5aee0ab92aac04c262d44ccc12934",
+      "byte_length": 2818,
+      "commit_payload_sha256": "baabb3d9bcfa1cc08e1c45d93ad1c4e153d214f2f1bc3cc3e124c966e2323772",
+      "embedded_signature_present": true,
+      "signature_verification": "valid cryptographic signature; owner trust not established",
+      "verified_signing_key_fingerprint": "60478B57AF12FE4ABCCB5B8967AD45206315CD5B"
+    }
+  ],
+  "public_stack_checkpoints": [
+    {
+      "repository": "Ambercontinuum/AMLA",
+      "url": "https://github.com/Ambercontinuum/AMLA",
+      "repository_created_at": "2025-12-09T19:28:19Z",
+      "earliest_inspected_commit": "977314b3c44bfd1481586c704743388d2a5b203c",
+      "author_date": "2025-12-09T19:28:22Z",
+      "committer_date": "2025-12-09T19:28:22Z",
+      "commit_url": "https://github.com/Ambercontinuum/AMLA/commit/977314b3c44bfd1481586c704743388d2a5b203c"
+    },
+    {
+      "repository": "Ambercontinuum/CHANDRA",
+      "url": "https://github.com/Ambercontinuum/CHANDRA",
+      "repository_created_at": "2025-12-03T00:05:41Z",
+      "earliest_inspected_commit": "29e0c08385135474477ca8750d529fcb065104d5",
+      "author_date": "2025-12-03T00:06:00Z",
+      "committer_date": "2025-12-03T00:06:00Z",
+      "commit_url": "https://github.com/Ambercontinuum/CHANDRA/commit/29e0c08385135474477ca8750d529fcb065104d5"
+    },
+    {
+      "repository": "Ambercontinuum/PDOT",
+      "url": "https://github.com/Ambercontinuum/PDOT",
+      "repository_created_at": "2026-05-16T22:28:38Z",
+      "earliest_inspected_commit": "2ff1ae873495d79d2632e202b58632a3a442448f",
+      "author_date": "2026-05-16T22:28:30Z",
+      "committer_date": "2026-05-16T22:28:30Z",
+      "commit_url": "https://github.com/Ambercontinuum/PDOT/commit/2ff1ae873495d79d2632e202b58632a3a442448f"
+    },
+    {
+      "repository": "Ambercontinuum/SERAPH-1.0",
+      "url": "https://github.com/Ambercontinuum/SERAPH-1.0",
+      "repository_created_at": "2026-10-14T16:09:45Z",
+      "earliest_inspected_commit": "da6a2ed0865984d6c2f0dfa0feacbcd8d61067a0",
+      "author_date": "2026-10-14T16:05:18Z",
+      "committer_date": "2026-10-14T16:15:08Z",
+      "commit_url": "https://github.com/Ambercontinuum/SERAPH-1.0/commit/da6a2ed0865984d6c2f0dfa0feacbcd8d61067a0"
+    },
+    {
+      "repository": "Ambercontinuum/STK-Flux",
+      "url": "https://github.com/Ambercontinuum/STK-Flux",
+      "repository_created_at": "2026-03-04T17:17:50Z",
+      "earliest_inspected_commit": "a87efd9dfadafe49be44ec1013f22509d82f314e",
+      "author_date": "2026-03-04T17:19:03Z",
+      "committer_date": "2026-03-04T17:19:03Z",
+      "commit_url": "https://github.com/Ambercontinuum/STK-Flux/commit/a87efd9dfadafe49be44ec1013f22509d82f314e"
+    }
+  ],
+  "limitations": [
+    "Recorded Git dates are not trusted timestamp attestations or proof of first public visibility.",
+    "Content hashes establish byte identity, not authorship, originality, consent, or historical possession.",
+    "Historical source blobs are not included in this publication."
+  ],
+  "signing_key": {
+    "source": "https://api.github.com/users/Ambercontinuum/gpg_keys",
+    "retrieved_date": "2026-10-14",
+    "file": "signing-key.asc",
+    "content_sha256": "77e0361a67bbd15bf23c5f85ae2d0d00bb1d3ee0991a17ec6cc949bdab9201ca",
+    "fingerprint": "60478B57AF12FE4ABCCB5B8967AD45206315CD5B",
+    "trust": "Public-key association with GitHub account observed at retrieval; no independent real-world identity or historical publication attestation.",
+    "encoding_note": "ASCII-armored public key stored with LF line endings; hash identifies the bundled armor bytes."
+  },
+  "research_stack_sources": [
+    {
+      "repository": "Ambercontinuum/AMLA",
+      "commit": "21760b3c246c9f98d8b295e9e9ffc2517e4cb475",
+      "path": "README.md",
+      "git_blob_oid": "6e0f4e354ea13b0e9428a8467c6a3638dfdd1d8e",
+      "content_sha256": "541a326c3a408ffb1533ac9ac44af007345af3d89f380a3965afe3e1f1e8ae78",
+      "url": "https://github.com/Ambercontinuum/AMLA/blob/21760b3c246c9f98d8b295e9e9ffc2517e4cb475/README.md",
+      "byte_length": 2733
+    },
+    {
+      "repository": "Ambercontinuum/CHANDRA",
+      "commit": "ad7ac98d8291dcc52f2ec4a2e99849ef241f3cc3",
+      "path": "README.md",
+      "git_blob_oid": "06f1b58764488aa826fd1af8c140b3604bbb24d3",
+      "content_sha256": "880bdeba791d4f5b78829704f9e5bba723c9ae5b191c02d5ddcf3372bf18de47",
+      "url": "https://github.com/Ambercontinuum/CHANDRA/blob/ad7ac98d8291dcc52f2ec4a2e99849ef241f3cc3/README.md",
+      "byte_length": 20240
+    },
+    {
+      "repository": "Ambercontinuum/PDOT",
+      "commit": "172b1158468d0be6e010c1627cb77c5155536161",
+      "path": "README.md",
+      "git_blob_oid": "743ef9584aab304c7e4236ced3fded0b832566c2",
+      "content_sha256": "5b70a87631bb77654bc959276d09f06994ec3c26bc1925e293110e0185cfe047",
+      "url": "https://github.com/Ambercontinuum/PDOT/blob/172b1158468d0be6e010c1627cb77c5155536161/README.md",
+      "byte_length": 4926
+    },
+    {
+      "repository": "Ambercontinuum/SERAPH-1.0",
+      "commit": "9d8d7c25a6315fa4c7cb9c1b80c1785afbbe9668",
+      "path": "README.md",
+      "git_blob_oid": "ee68b5e9d2e53123a90400a369ce25252ba67269",
+      "content_sha256": "ff78f83fb51e247622ed94a40e716cff06aa1e7850f017d0cb8d49c266501630",
+      "url": "https://github.com/Ambercontinuum/SERAPH-1.0/blob/9d8d7c25a6315fa4c7cb9c1b80c1785afbbe9668/README.md",
+      "byte_length": 12947
+    },
+    {
+      "repository": "Ambercontinuum/STK-Flux",
+      "commit": "e702716df9707d2c2c14db39a7e5c6cd989bdfbd",
+      "path": "README.md",
+      "git_blob_oid": "0cc5dceef6a44021ef27d00f9d75c22d13e2b0f6",
+      "content_sha256": "048fdc756c8861f5c9e2bb678be87aba0f0f18e5e20edc63b3c76329e6d85103",
+      "url": "https://github.com/Ambercontinuum/STK-Flux/blob/e702716df9707d2c2c14db39a7e5c6cd989bdfbd/README.md",
+      "byte_length": 10553
+    },
+    {
+      "repository": "Ambercontinuum/PDOT",
+      "commit": "172b1158468d0be6e010c1627cb77c5155536161",
+      "path": "analysis/pdot_seraph_adapter.py",
+      "url": "https://github.com/Ambercontinuum/PDOT/blob/172b1158468d0be6e010c1627cb77c5155536161/analysis/pdot_seraph_adapter.py",
+      "content_sha256": "7ee1c6dc4a6f256a8aa411096f7e5f3e8aec9e4c661fa96833fae2d02f58a791",
+      "byte_length": 23002,
+      "git_blob_oid": "fc3f4eb7af3da19567a2fa7c00963bcb9703db33"
+    },
+    {
+      "repository": "Ambercontinuum/AMLA",
+      "commit": "21760b3c246c9f98d8b295e9e9ffc2517e4cb475",
+      "path": "utils/chandraAnalysis.ts",
+      "url": "https://github.com/Ambercontinuum/AMLA/blob/21760b3c246c9f98d8b295e9e9ffc2517e4cb475/utils/chandraAnalysis.ts",
+      "content_sha256": "d2ccf3f98dd815622b4f6375072296c9d38b207574a055ea2b691c6a8aa683a1",
+      "byte_length": 2962,
+      "git_blob_oid": "00c3c51137b86f8745a965c73a1b1f0854bad4c1"
+    },
+    {
+      "repository": "Ambercontinuum/AMLA",
+      "commit": "21760b3c246c9f98d8b295e9e9ffc2517e4cb475",
+      "path": "services/geminiService.ts",
+      "url": "https://github.com/Ambercontinuum/AMLA/blob/21760b3c246c9f98d8b295e9e9ffc2517e4cb475/services/geminiService.ts",
+      "content_sha256": "bd3732c26002266f0910a734cc1d2ded2217110ea7591d3bcdec221d9a01e67d",
+      "byte_length": 6249,
+      "git_blob_oid": "fea9d93555a56231c8f2acd1d6013f4f2ccbb28c"
+    },
+    {
+      "repository": "Ambercontinuum/CHANDRA",
+      "commit": "ad7ac98d8291dcc52f2ec4a2e99849ef241f3cc3",
+      "path": "psi_field_integration.py",
+      "url": "https://github.com/Ambercontinuum/CHANDRA/blob/ad7ac98d8291dcc52f2ec4a2e99849ef241f3cc3/psi_field_integration.py",
+      "content_sha256": "3363020ce805a03e27187cbf0379ee462baccb68275adbf01d866c3ae698c21c",
+      "byte_length": 25786,
+      "git_blob_oid": "6fa357aa62e799e2db2debee47a9de6abdbfc1a7"
+    }
+  ],
+  "research_stack_review_scope": "Included only the five repositories whose inspected pinned public documentation explicitly names SERAPH; selected integration source also inspected; no external code executed."
+}

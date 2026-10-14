@@ -74,6 +74,8 @@ safety system.
 | Run the sidecar in local Kubernetes | [Kubernetes deployment](deploy/kubernetes/README.md) |
 | Evaluate or challenge the architecture | [Validation](docs/validation.md) and [design lineage](docs/design_lineage.md) |
 | Understand how it was developed with AI | [Development process report](docs/development-process.md) |
+| Inspect authorship, development checkpoints, and artifact hashes | [Provenance](PROVENANCE.md) |
+| Inspect repositories that explicitly name SERAPH | [Research-stack map](docs/research-stack.md) |
 | Fix a defect or add an adapter | [Contributing](CONTRIBUTING.md) |
 
 Running the server alone does not attach it to an agent. The adapter must
