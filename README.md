@@ -1,13 +1,14 @@
 # SERAPH
 
-SERAPH is a research kernel for evaluating an agent's proposed actions before
-execution and recording what its host reports actually happened. Connect it
-through an adapter, declare the constraints and evidence your application needs,
-and inspect why a transition was admitted, held, or denied.
+Seraph is a runtime governance sidecar for AI agents. It carries human-defined
+commitments into action by evaluating proposed tool calls and recording
+host-reported execution, making its governance decisions inspectable.
 
 It combines scoped constraint checks, trajectory coherence, recovery,
 containment, coupling checks, and execution binding. The OpenClaw adapter is
 the reference path for experimenting with a self-hosted agent and local model.
+The underlying governance kernel also supports embedded use inside an
+application; the sidecar runs it as a separate service alongside an agent host.
 
 This is the domain-neutral public research repository, migrated from a reviewed
 source snapshot with fresh history. Private research archives and deployment
