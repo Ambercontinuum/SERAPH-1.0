@@ -4,7 +4,7 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copy package metadata first for layer caching
-COPY pyproject.toml README.md ./
+COPY pyproject.toml README.md LICENSE ./
 
 # Copy source
 COPY seraph/      ./seraph/

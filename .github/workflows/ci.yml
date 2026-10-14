@@ -98,6 +98,23 @@ jobs:
           done
           node adapters/openclaw/scripts/validate-adapter.mjs
 
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the research sidecar image
+        run: docker build --tag seraph-test .
+      - name: Check container health and installed validation harness
+        run: |
+          docker run --detach --name seraph-test --publish 127.0.0.1:8000:8000 seraph-test
+          trap 'docker logs seraph-test; docker rm --force seraph-test' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8000/health; then break; fi
+            sleep 1
+          done
+          curl --fail http://127.0.0.1:8000/health
+          docker exec seraph-test python -m validation.runtime_governance
+
   formal:
     runs-on: ubuntu-latest
     steps:

@@ -27,7 +27,8 @@ private methods report or proprietary application topology is published here.
   incomplete replies could throw in the hook rather than return an explicit
   blocking result. Invalid shapes now produce `seraph_invalid_response`.
 - Added `validation/` to Docker's package source and excluded local build state
-  from Docker context. Docker execution was not tested locally.
+  from Docker context. Docker execution was not tested locally; CI separately
+  builds the image, checks sidecar health, and runs its installed validation harness.
 - Moved the SDK needed only by the CHANDRA live example to the optional
   `chandra` extra. The core kernel requires no cloud-model SDK.
 - CI uses pytest to include five cases omitted by unittest discovery, installs
