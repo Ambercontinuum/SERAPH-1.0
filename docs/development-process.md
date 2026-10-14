@@ -100,6 +100,40 @@ The record is imperfect: some entries were backfilled after reminders, some
 claims were corrected, and the agents shared context. A second AI reviewer is
 not an independent laboratory, and agreement between agents is not a result.
 
+## Second-order cybernetics and the operational record
+
+Seraph's research positioning includes an engineering contribution to
+second-order cybernetics. The relevant distinction is the inclusion of the
+observing participant in the system being investigated. Glanville's
+[Second Order Cybernetics](https://www.pangaro.com/glanville/Glanville-SECOND_ORDER_CYBERNETICS.pdf),
+particularly its summary and introduction, develops the observer's participation
+and the circular relationship between observation and intervention. Applying
+that perspective to this project is our research interpretation of the recorded
+practice, rather than a conclusion established by the source about Seraph.
+
+Amber participates as designer, operator, and researcher. She defines which
+distinctions matter, observes how agents and tools respond, challenges the
+observations and explanations, and revises requirements or implementation.
+Agent output and operational failures also inform her subsequent interventions.
+The resulting system includes that changing human-machine relationship, not
+only the code at a single release checkpoint.
+
+The private scratchpad supplies a longitudinal operational record of this
+practice: dated requirements, interventions, proposals, disagreement, observed
+behavior, corrections, and implementation follow-through. Its research value is
+the traceable relationship between those events. The cases below provide a
+public account of selected changes with links to implementation and tests;
+the private archive and transcripts are not released by this report.
+
+Three evidence levels remain distinct: an observation recorded by a participant,
+a retrospective interpretation of that observation, and a software behavior
+that a reader can reproduce. The record includes shared agent context and
+backfilled notes, as described above. It is neither a complete independent
+observation of every event nor a controlled longitudinal study. These limits
+bound the claims while retaining the operational record as part of the
+contribution: a documented, revisable practice of governing human-AI activity
+from within that activity.
+
 ## Case 1: critique changed affected-set enforcement
 
 September 6 records show a substantive challenge to affected-inhabitant

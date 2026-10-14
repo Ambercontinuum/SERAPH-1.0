@@ -39,6 +39,27 @@ to test, not a property established by calling the server. See the
 [governance framing and process report](docs/development-process.md#human-intent-as-a-runtime-governance-commitment)
 and [validation boundaries](docs/validation.md).
 
+## Contribution to second-order cybernetics
+
+Seraph is an experimental engineering contribution to second-order cybernetics:
+the human who defines, observes, and revises governance is part of the system
+under study. This positioning follows the field's attention to observing
+systems and the observer's participation, described by
+[Ranulph Glanville](https://www.pangaro.com/glanville/Glanville-SECOND_ORDER_CYBERNETICS.pdf).
+
+The contribution includes both the executable sidecar and a longitudinal
+operational record in the private development scratchpad. That record captures
+Amber's requirements and interventions, agent proposals and disagreements,
+observed failures, corrections, and resulting implementation changes. The
+governance process itself becomes an object of observation and revision.
+
+The public [process report](docs/development-process.md#second-order-cybernetics-and-the-operational-record)
+describes this loop through selected cases linked to inspectable code and tests.
+The scratchpad remains private; its observations, retrospective interpretation,
+and reproducible software results are distinct forms of evidence. This is a
+documented case of reflexive engineering practice, not an independently audited
+longitudinal study or proof that coupling measurements are empirically validated.
+
 ## Current status
 
 The Python distribution is the `0.1.0` public research alpha, installable from
