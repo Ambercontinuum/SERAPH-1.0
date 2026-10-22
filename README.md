@@ -16,7 +16,7 @@ state are excluded. See [publication provenance](docs/publication.md).
 Proprietary mission topologies and downstream products integrate through
 SERAPH's contracts but are not part of the public architecture.
 
-## Why it matters to governance research
+## Contribution to governance research
 
 **Seraph carries your intent into action.**
 
